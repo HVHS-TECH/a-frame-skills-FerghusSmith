@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-
+    <title>Zephyr to the sky</title>
 <script src="https://aframe.io/releases/1.1.0/aframe.min.js"></script>
 <script src="https://rawgit.com/donmccurdy/aframe-extras/v2.1.1/dist/aframe-extras.loaders.min.js"></script> 
 
@@ -11,10 +11,46 @@
       <a-sky color="lightblue"></a-sky>
       
       <a-entity 
-      ply-model="src:"
-      position="0 0 -2"
-      rotation="0 0 0"
+      ply-model="src:dog.ply"
+      position="0 1 -2"
+      rotation="-90 0 0"
+      scale="90 1 90"
+      animation="
+      property: position;
+      from: 0 -100 -50;
+      to: 0 500 -50;
+      dur: 10000
+      "
       ></a-entity>
+      <a-torus
+        position="0 110 -50"
+        rotation="90 0 0"
+        scale="30 10 30"
+        radius-tubular="0.02"
+        animation="
+      property: position;
+      from: 0 10 -50;
+      to: 0 610 -50;
+      dur: 10000
+      "
+      ></a-torus>
+
+      <a-cylinder
+        color="green"
+        scale="40 600 40"
+        position="0 250 -50"
+        opacity="0.5"
+      ></a-cylinder>
+
+      <a-sphere
+        position="0 400 -50"
+        scale="200 10 200"
+      ></a-sphere>
+      <a-sphere
+        color="black"
+        position="0 390 -50"
+        scale="40 10 40"
+      ></a-sphere>
                  
     </a-scene>
   </body>
